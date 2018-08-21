@@ -1,5 +1,10 @@
 #include "Duck.hpp"
 
+Duck::Duck(std::unique_ptr<IFlyBehavior> fb, std::unique_ptr<IQuackBehavior> qb) {
+    _flyBehavior = std::move(fb);
+    _quackBehavior = std::move(qb);
+}
+
 void Duck::performQuack() {
     _quackBehavior->quack();
 }

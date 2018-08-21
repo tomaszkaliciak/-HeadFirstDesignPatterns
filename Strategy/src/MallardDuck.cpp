@@ -4,9 +4,9 @@
 #include "FlyWithWings.hpp"
 #include "Quack.hpp"
 
-MallardDuck::MallardDuck() {
-    setFlyBehavior(std::make_unique<FlyWithWings>());
-    setQuackBehavior(std::make_unique<Quack>());
+MallardDuck::MallardDuck() :
+Duck(std::make_unique<FlyWithWings>(), std::make_unique<Quack>())
+{
 }
 
 void MallardDuck::display() {

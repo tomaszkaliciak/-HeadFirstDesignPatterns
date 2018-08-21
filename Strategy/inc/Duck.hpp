@@ -8,6 +8,7 @@
 class Duck {
 
 public:
+    Duck(std::unique_ptr<IFlyBehavior> fb, std::unique_ptr<IQuackBehavior> qb);
     void performQuack();
     void performFly();
     void setFlyBehavior(std::unique_ptr<IFlyBehavior> fb);
