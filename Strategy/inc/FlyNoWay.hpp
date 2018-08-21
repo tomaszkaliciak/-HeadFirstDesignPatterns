@@ -5,7 +5,7 @@
 
 class FlyNoWay: public IFlyBehavior {
 public:
-    void fly() override;
+    void fly() const override;
 };
 
 #endif //FLY_NO_WAY_HPP

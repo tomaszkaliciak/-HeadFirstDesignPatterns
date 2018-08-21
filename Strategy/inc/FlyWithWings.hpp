@@ -5,7 +5,7 @@
 
 class FlyWithWings: public IFlyBehavior {
 public:
-    void fly() override;
+    void fly() const override;
 };
 
 #endif //FLY_WITH_WINGS_HPP

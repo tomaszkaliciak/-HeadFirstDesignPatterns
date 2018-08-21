@@ -7,7 +7,7 @@ class MallardDuck: public Duck {
 
 public:
     MallardDuck();
-    void display() override;
+    void display() const override;
 };
 
 #endif //MALLARD_DUCK_HPP

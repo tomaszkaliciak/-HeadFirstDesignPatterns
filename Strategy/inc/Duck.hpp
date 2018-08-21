@@ -9,11 +9,11 @@ class Duck {
 
 public:
     Duck(std::unique_ptr<IFlyBehavior> fb, std::unique_ptr<IQuackBehavior> qb);
-    void performQuack();
-    void performFly();
+    void performQuack() const;
+    void performFly() const;
     void setFlyBehavior(std::unique_ptr<IFlyBehavior> fb);
     void setQuackBehavior(std::unique_ptr<IQuackBehavior> qb);
-    virtual void display() = 0;
+    virtual void display() const = 0;
     virtual ~Duck() {}
 
 protected:

@@ -5,7 +5,7 @@
 
 class Quack: public IQuackBehavior {
 public:
-    void quack() override;
+    void quack() const override;
 };
 
 #endif //QUACK_HPP

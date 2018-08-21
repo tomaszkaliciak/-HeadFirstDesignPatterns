@@ -3,7 +3,7 @@
 
 class IQuackBehavior {
 public:
-    virtual void quack() = 0;
+    virtual void quack() const = 0;
 };
 
 #endif //I_QUACK_BEHAVIOR_HPP

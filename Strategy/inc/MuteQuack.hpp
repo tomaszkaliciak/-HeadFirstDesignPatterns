@@ -5,7 +5,7 @@
 
 class MuteQuack: public IQuackBehavior {
 public:
-    void quack() override;
+    void quack() const override;
 };
 
 #endif //MUTE_QUACK_HPP

@@ -5,11 +5,11 @@ Duck::Duck(std::unique_ptr<IFlyBehavior> fb, std::unique_ptr<IQuackBehavior> qb)
     _quackBehavior = std::move(qb);
 }
 
-void Duck::performQuack() {
+void Duck::performQuack() const {
     _quackBehavior->quack();
 }
 
-void Duck::performFly() {
+void Duck::performFly() const {
     _flyBehavior->fly();
 }
 

@@ -9,6 +9,6 @@ Duck(std::make_unique<FlyWithWings>(), std::make_unique<Quack>())
 {
 }
 
-void MallardDuck::display() {
+void MallardDuck::display() const {
     std::cout << "I'm Mallard Duck!" << std::endl;
 }

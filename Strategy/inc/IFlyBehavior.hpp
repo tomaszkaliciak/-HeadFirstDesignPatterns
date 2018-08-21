@@ -3,7 +3,7 @@
 
 class IFlyBehavior {
 public:
-    virtual void fly() = 0;
+    virtual void fly() const = 0;
 };
 
 #endif //I_FLY_BEHAVIOR_HPP
