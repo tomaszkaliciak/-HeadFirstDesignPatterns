@@ -2,13 +2,14 @@
 #define WEATHER_DATA_HPP
 
 #include <vector>
-#include "inc/ISubject.hpp"
+#include "ISubject.hpp"
 
 class WeatherData: public ISubject {
 public:
-    double getTemperature() const;
-    double getHumidity() const;
-    double getPressure() const;
+    WeatherData();
+    double getTemperature() const { return _temperature; }
+    double getHumidity() const { return _humidity; }
+    double getPressure() const { return _pressure; }
     void measurementsChanged();
     void setMeasurements(double temp, double humidity, double pressure);
 

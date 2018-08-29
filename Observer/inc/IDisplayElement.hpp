@@ -3,7 +3,8 @@
 
 class IDisplayElement {
 public:
-    void display() const = 0;
+    virtual ~IDisplayElement() = default;
+    virtual void display() const = 0;
 };
 
 #endif // I_DISPLAY_ELEMENT_HPP
