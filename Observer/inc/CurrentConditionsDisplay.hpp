@@ -9,11 +9,12 @@ class ISubject;
 class CurrentConditionsDisplay: public IObserver, public IDisplayElement {
 public:
     CurrentConditionsDisplay(ISubject*);
+    ~CurrentConditionsDisplay();
     void update(double temp, double humidity, double pressure) override;
     void display() const override;
 private:
     ISubject* _subject;
-        double _temperature;
+    double _temperature;
     double _humidity;
     double _pressure;
 };

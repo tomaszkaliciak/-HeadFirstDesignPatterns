@@ -5,6 +5,13 @@
 CurrentConditionsDisplay::CurrentConditionsDisplay(ISubject* subject):
 _subject(subject)
 {
+    _subject->registerObserver(this);
+}
+
+CurrentConditionsDisplay::~CurrentConditionsDisplay() {
+    if(_subject != nullptr) {
+        _subject->removeObserver(this);
+    }
 }
 
 void CurrentConditionsDisplay::update(double temp, double humidity, double pressure) {
@@ -15,7 +22,7 @@ void CurrentConditionsDisplay::update(double temp, double humidity, double press
 }
 
 void CurrentConditionsDisplay::display() const {
-    std::cout << "Current temperature: " << _temperature << std::endl;
-    std::cout << "Current humidity   : " << _humidity << std::endl;
-    std::cout << "Current pressure   : " << _pressure << std::endl << std::endl;
+    std::cout << "Current temperature: " << _temperature << "\n";
+    std::cout << "Current humidity   : " << _humidity << "\n";
+    std::cout << "Current pressure   : " << _pressure << "\n\n";
 }
